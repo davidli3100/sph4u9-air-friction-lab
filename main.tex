@@ -1,0 +1,106 @@
+\documentclass[
+    letterpaper,
+    man,
+    floatsintext,
+    british
+]{apa6}
+
+\usepackage{longtable}
+\usepackage{amssymb}
+\usepackage[british]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{epstopdf}
+\usepackage{csquotes}
+\usepackage{placeins}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage[hidelinks]{hyperref}
+\usepackage{gensymb}
+\usepackage[
+    style=apa,
+    backend=biber,
+    sortcites=true,
+    sorting=nyt,
+%    isbn=false,
+    % url=false,
+%    doi=false,
+%    eprint=false,
+    hyperref=false,
+    backref=false,
+%    firstinits=false,
+]{biblatex}
+\addbibresource{bibliography.bib}
+\usepackage{mathtools}
+\pgfplotsset{compat=1.16}
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+
+% Swap the definition of \abs* and \norm*, so that \abs
+% and \norm resizes the size of the brackets, and the 
+% starred version does not.
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+%
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother
+
+\newcommand*{\Value}{\frac{1}{2}x^2}%
+
+\DeclareLanguageMapping{british}{british-apa}
+
+% maps apacite commands to biblatex commands
+\let \citeNP \cite
+\let \citeA \textcite
+\let \cite \parencite
+
+%%%
+% Apa Bib - enable reprint according to apa
+%%%
+
+\input{enable-reprint}
+
+\bibliography{bibliography}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Exploring Air Friction and its Effects on Acceleration}
+\shorttitle{Exploring Air Friction and its Effects on Acceleration}
+\author{David Li, Bert Sun}
+\affiliation{John Fraser Secondary School}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+  % for some reason the first character gets cut off
+  sIn this experiment we studied the effects of increasing the cross-sectional area of a cart on its acceleration and velocity.
+  Through this, we proved that air resistance exists and is directly correlated to the cross-sectional area of an object, as well as its shape. Furthermore, we found that air resistance can be decreased by keeping cross-sectional area constant and changing the shape of an object.
+\end{abstract}
+
+\section{Background}
+\input{background.tex}
+
+\section{Methods}
+\input{methods.tex}
+
+
+\newpage
+\section{Results}
+\input{chart}
+% \input{results.tex}
+
+\section{Discussion}
+\input{discussion.tex}
+
+\nocite{*}
+\printbibliography
+
+\input{appendix}
+
+
+\end{document}
