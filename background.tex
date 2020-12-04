@@ -19,7 +19,7 @@
 \draw [shift={(190.3,219.2)}, rotate = 195.06] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
 
 % Text Node
-\draw (237,254) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\fontfamily{}\selectfont {\footnotesize 3.14°}}};
+\draw (237,254) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\fontfamily{}\selectfont {\footnotesize 3.19°}}};
 % Text Node
 \draw (13,154) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\fontfamily{}\selectfont Cart}};
 % Text Node
@@ -29,7 +29,7 @@
 
 
 \end{tikzpicture}
-\caption{General experimental setup with a \textit{Smart Cart} rolling down a ramp. Cross-sectional area of the cart is changed using a cardboard attachment.}
+\caption{General experimental setup with a Smart Cart rolling down a ramp. Cross-sectional area of the cart is changed using a cardboard attachment.}
 \label{basicramp}
 \end{figure}
 
@@ -37,8 +37,7 @@ Figure \ref{basicramp} shows the basic experimental configuration of this experi
 a ramp with an attachment on its front. Said attachment modified the cart's cross-sectional area as well as its
 aerodynamic properties. 
 
-We can break down the forces experienced by the cart in \ref{basicramp} with the free body diagram...
-
+We can break down the forces experienced by the cart into components \ref{basicramp} as shown in the free body diagram below.
 
 \begin{figure}[!h]
   \captionsetup{justification=centering}
@@ -88,15 +87,15 @@ We can break down the forces experienced by the cart in \ref{basicramp} with the
 % Text Node
 \draw (54,71.9) node [anchor=north west][inner sep=0.75pt]    {$-F_{D}$};
 % Text Node
-\draw (150,132.41) node [anchor=north west][inner sep=0.75pt]  [font=\tiny,rotate=-12.8]  {$3.14\degree $};
+\draw (150,132.41) node [anchor=north west][inner sep=0.75pt]  [font=\tiny,rotate=-12.8]  {$3.19\degree $};
 % Text Node
 \draw (177,234.4) node [anchor=north west][inner sep=0.75pt]    {$-F_{g}$};
 % Text Node
-\draw (422,192.9) node [anchor=north west][inner sep=0.75pt]  [font=\tiny]  {$3.14\degree $};
+\draw (422,192.9) node [anchor=north west][inner sep=0.75pt]  [font=\tiny]  {$3.19\degree $};
 % Text Node
-\draw (171.5,214.9) node [anchor=north west][inner sep=0.75pt]  [font=\tiny]  {$mg\sin 3.14\degree $};
+\draw (171.5,214.9) node [anchor=north west][inner sep=0.75pt]  [font=\tiny]  {$mg\sin 3.19\degree $};
 % Text Node
-\draw (166,208) node [anchor=north west][inner sep=0.75pt]  [font=\tiny,rotate=-283]  {$-mg\cos 3.14\degree $};
+\draw (166,208) node [anchor=north west][inner sep=0.75pt]  [font=\tiny,rotate=-283]  {$-mg\cos 3.19\degree $};
 % Text Node
 \draw (68,97.9) node [anchor=north west][inner sep=0.75pt]    {$-F_{k}$};
 
@@ -105,6 +104,9 @@ We can break down the forces experienced by the cart in \ref{basicramp} with the
 \caption{Free body diagram illustrating various forces acting upon the Smart Cart}
 \label{fbdcart}
 \end{figure}
+
+In the free body diagram in figure \ref{fbdcart}, the cart is on the ramp, with the forces of air resistance ($F_{D}$) and kinetic friction ($F_{k}$) acting
+against the cart in the horizontal direction. The cart is also accelerated down the ramp by the horizontal component of gravity ($mg\sin(3.19\degree)$). 
 
 \begin{gather*}
   F_{\textup{net}} = mg\sin(\theta) - \mu mg\cos(\theta) - kv^2\\
