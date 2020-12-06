@@ -12,6 +12,7 @@
           clip=false,
           width=16cm,
           height=8.5cm,
+          legend pos=south east
       ]
   
               \addplot[color=blue,mark=none] table [x=Time (s), y=K, col sep=comma] {\loadedtable};
@@ -19,8 +20,8 @@
               \addplot[color=yellow,mark=none] table [x=Time (s), y=Position (m), col sep=comma] {\loadedtable};
               \addplot[color=green,mark=none] table [x=Time (s), y=Velocity (m/s), col sep=comma] {\loadedtable};
               \addplot[color=orange,mark=none] table [x=Time (s), y=Acceleration (m/s2), col sep=comma] {\loadedtable};
-              \addplot [color=black, domain=0:1.5, mark=none smooth, thick] {(2.37*10^-03)*x+0.509}  node[above,pos=1] {$2.37E-03*x + 0.509$};
-              \legend{K, Force (N), Position (m), Velocity (m/s), Acceleration (m/s$^2$)}
+              \addplot [color=black, domain=0:1.5, mark=none smooth, thick] {(2.37*10^-03)*x+0.509};
+              \legend{K, Force (N), Position (m), Velocity (m/s), Acceleration (m/s$^2$), $2.37E-03*x + 0.509$}
       \end{axis}
   \end{tikzpicture}
   \\

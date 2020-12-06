@@ -1,9 +1,9 @@
 \begin{center}
   \begin{figure}[H]
       \centering
-      \caption{Raw Data Collected from Smart Cart and Calculated \textit{K} value - Cardboard (9.4 x 26.5)}
-      \label{chart:cardboard9.4x26.5}
-      \pgfplotstableread[col sep = comma]{data/cardboard9.4x26.5.csv}\loadedtable
+      \caption{Raw Data Collected from Smart Cart and Calculated \textit{K} value - Cardboard (12 x 20.75)}
+      \label{chart:cardboard12x20.75}
+      \pgfplotstableread[col sep = comma]{data/cardboard12x20.75.csv}\loadedtable
       \begin{tikzpicture}
       \begin{axis}[
           xlabel=Time (s), % label x axis
@@ -12,6 +12,7 @@
           clip=false,
           width=16cm,
           height=8.5cm,
+          legend pos=south east
       ]
   
               \addplot[color=blue,mark=none] table [x=Time (s), y=K, col sep=comma] {\loadedtable};
@@ -19,8 +20,8 @@
               \addplot[color=yellow,mark=none] table [x=Time (s), y=Position (m), col sep=comma] {\loadedtable};
               \addplot[color=green,mark=none] table [x=Time (s), y=Velocity (m/s), col sep=comma] {\loadedtable};
               \addplot[color=orange,mark=none] table [x=Time (s), y=Acceleration (m/s2), col sep=comma] {\loadedtable};
-              \addplot [color=black, domain=0:1.6, mark=none smooth, thick] {(-0.0367)*x+0.463}  node[above,pos=1] {$-0.0367x + 0.463$};
-              \legend{K, Force (N), Position (m), Velocity (m/s), Acceleration (m/s$^2$)}
+              \addplot [color=black, domain=0:1.54, mark=none smooth, thick] {(-0.073)*x+0.496};
+              \legend{K, Force (N), Position (m), Velocity (m/s), Acceleration (m/s$^2$), $-0.073x + 0.496$}
       \end{axis}
   \end{tikzpicture}
   \\
