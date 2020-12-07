@@ -107,15 +107,15 @@ We can break down the forces experienced by the cart into components \ref{fig:ba
 
 In the free body diagram in figure \ref{fbdcart}, the cart is on the ramp, with the forces of air resistance ($F_{D}$) and kinetic friction ($F_{k}$) acting
 against the cart in the horizontal direction. The cart is also accelerated down the ramp by the horizontal component of gravity ($mg\sin(3.19\degree)$).
-Since the Smart Cart is on wheels, the wheels actually generate static friction against the ramp, but kinetic friction occurs within the axles. The exact
-force of friction is difficult to determine, however, we can use the average force of the cart with no attachments in order to determine the constant $F$.
 Given that the force of air resistance upon an object with a drag coefficient of \textit{K} is $Kv^2$, the following equation can be derived to solve for the
 drag coefficient where acceleration and velocity are a function of time. 
 
+\begin{equation}
+  F = mg\sin(\theta) - F_{k}
+  \label{Eq:F}
+\end{equation}
 \begin{gather*}
-  F_{\textup{net}} = mg\sin(\theta) - F_{f} - Kv(t)^2\\
-  F = mg\sin(\theta) - F_{f} \\
-  F = \frac{\textup{Average Force}}{\textup{Mass of Cart with No Attachments}} \\
+  F_{\textup{net}} = F - Kv(t)^2\\
   ma(t) = F - Kv(t)^2\\
   F - ma(t) = Kv(t)^2
 \end{gather*}

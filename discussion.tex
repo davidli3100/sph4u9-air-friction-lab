@@ -25,3 +25,25 @@ This shows that increasing cross-sectional area will affect the aerodynamic prop
 which will create drag forces that decelerate the cart.
 
 \subsection{Calculating the Drag Coefficient (\textit{K})}
+To calculate the drag coefficient for a given time, we can use equation \ref{Eq:K}.
+Since all the variables needed to solve for \textit{K} at a given time are known, then 
+these values can be substituted to solve for \textit{K} at a given time - with the exception of $F_{k}$ from
+equation \ref{Eq:F}. 
+
+\subsection{Calculating the Force of Kinetic Friction}
+The friction forces on the cart are a system
+composed of static friction from the wheels on the ramp, and kinetic friction on the axles. It
+becomes difficult to find kinetic friction since it presents two unknowns: $F_{k}$ and \textit{K}.
+To determine $F_{k}$ without needing to use two unknown variables, we let $K = 0$ in the base case
+where the cart had no additional attachments affecting its cross-sectional area. We were able to set \textit{K}
+to zero in this case because in \ref{chart:nothing}, the linear regression of acceleration for the base case was equal to zero, thus showing
+that the deceleration due to air resistance was also zero. To find for $F_{k}$ given \textit{K}, we can solve
+for $F_{k}$ as a function of time by dividing acceleration by the mass of the cart and then average over the time interval
+of the respective trial. This will give us a numeric value for $F_{k}$.
+
+\begin{gather*}
+  F_{k}(t) = \frac{a(t)}{m}
+\end{gather*}
+\begin{equation}
+  F_{k} = \frac{\Sigma F_{k}(t)}{\textup{Number of Measurements Taken}}
+\end{equation}
