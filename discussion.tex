@@ -39,11 +39,50 @@ where the cart had no additional attachments affecting its cross-sectional area.
 to zero in this case because in \ref{chart:nothing}, the linear regression of acceleration for the base case was equal to zero, thus showing
 that the deceleration due to air resistance was also zero. To find for $F_{k}$ given \textit{K}, we can solve
 for $F_{k}$ as a function of time by dividing acceleration by the mass of the cart and then average over the time interval
-of the respective trial. This will give us a numeric value for $F_{k}$.
+of the respective trial. This will give us a numeric value for $F_{k}$ if it is needed in other calculations.
+For the purposes of this experiment, $F_{k}$ is included in the variable $F$\footnote{$F$ is the average force measured by the Smart Cart for the base case, as the average
+force experienced by the cart when air resistance is negligible would only be the component of gravity down the ramp, and $-F_{k}$} from \ref{Eq:F}, and not directly
+substituted into any calculations.
 
-\begin{gather*}
-  F_{k}(t) = \frac{a(t)}{m}
-\end{gather*}
-\begin{equation}
-  F_{k} = \frac{\Sigma F_{k}(t)}{\textup{Number of Measurements Taken}}
-\end{equation}
+\subsection{The Correlation Between Shape, Cross-Sectional Area, Angle of the Wedge, and \textit{K}}
+
+\subsubsection{Cross-Sectional Area}
+From the results in \ref{table:results}, we are able to see that for most cases, an increase in \textit{K}
+correlates to an increase in the overall cross-sectional area of that attachment. We also see that changing the dimensions
+of an attachment, but keeping surface area constant (as shown in both cardboard trials) does not affect \textit{K} in a
+significant manner. In fact, the change in \textit{K} for this case is marginal, and one could argue that it is not a statistically significant
+change.
+
+\subsubsection{Angle of the Wedge}
+% for wedge, statistically insignificant, force of air friction couldn't be measured properly
+Another interesting observation was the effects of adding an equilateral wedge onto the Smart Cart system. The equilateral wedge was of the same
+surface area as the cardboard. However, it had a significantly lower drag coefficient. This is due to the shape of the
+attachment itself. A wedge is able to "cut" through the air, which creates less turbulence and frictional drag around the surfaces
+of the attachment compared to a fully flat piece of cardboard. The shape of the wedge also redirects the air around the attachment
+instead of directly impacting the air, causing less deceleration upon the Smart Cart system.
+When the angle of the sharp part of the wedge facing forward was changed so that it was sharper, we see that \textit{K}
+decreases relative to a normal equilateral wedge. Making the leading edges of the wedge have a smaller angle relative
+to the ramp results in less force being used to push the air out of the way. Normally, for an attachment that is flat, the air directly
+creates a normal force against that attachment, pushing it up the ramp. With a sharp wedge, the sharper angles redirect that normal force
+so that it points outwards from the edge, resulting in less push-back against the cart in the horizontal direction.
+
+Linear regressions of the acceleration of both wedges are of the same order of magnitude as that of the cart with no attachments.
+However, these figures do carry a certain statistical insignificance due to the almost harmonic fluctuation of acceleration in these cases.
+Therefore, it can be said that adding these wedges make the cart have no air friction, or that air friction cannot be measured properly due to the 
+inaccuracy of the cart's measurements.
+
+\subsubsection{Shape}
+Both wedge, and flat cardboard shapes and their relation to \textit{K} have been previously discussed. When we flipped
+the orange cardboard attachment (top cover of a shoebox) over so that the raised edges face forward, it was observed that the
+\textit{K} value slightly increased relative to the flat side of the orange cardboard attachment. These attachments both have the
+same cross-sectional area, however, the overall shape of the "pocketed" orange attachment with its raised edges was more
+conducive to creating turbulence and frictional drag against the air. It can be theorized that the raised edges effectively
+trap some of the air impacting the attachment, thereby creating a pocket of air that creates more air resistance and decelerating the Smart Cart system.
+
+\subsubsection{General Conclusions}
+Through these trials, it can be shown that increasing the cross-sectional area of the Smart Cart increases the drag coefficient \textit{K}
+and decelerates the cart. Changing the dimensions while retaining the same cross-sectional area does not appear
+to affect air resistance and the \textit{K} value. It can also be shown that changing the angle at which the attachment impacts the air can
+decrease air resistance, and making said angle sharper, or smaller relative to the ramp, can further decrease air resistance.
+Finally, changing the shape of the attachment by adding raised edges also causes more air resistance, thereby increasing \textit{K} and
+causing deceleration.
